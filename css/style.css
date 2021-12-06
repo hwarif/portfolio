@@ -281,10 +281,34 @@ footer{
         background-image: url("../images/catsatsink.jpeg");
     }
 
+    .articlevertpics{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .articlevertpics img{
+        width: 30%;
+    }
+
+    .articlevertpics p{
+        display: block;
+    }
+
     main p{
-        width: 450px;
+        width: 350px;
         font-size: 20px;
+        display: none;
     }    
+
+    .history p{
+        display: block;
+        width: 500px;
+    }
+
+    .philosophy #visible{
+        display: block;
+        width: 500px;
+    }
     
     main h1{
         display: none;
