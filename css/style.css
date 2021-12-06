@@ -8,6 +8,10 @@ header{
     border-bottom: 3px solid #4a3432;
 }
 
+header h1{
+    display: none;
+}
+
 body{
     background-color: #fcfcf0; 
     color: #4a3432; 
@@ -60,7 +64,7 @@ h2{
     font-size: 30px;
     text-align: center;
     font-weight: 700;
-    margin-bottom: 5px;
+    margin-top: 20px;
 }
 
 main p{
@@ -72,6 +76,7 @@ main p{
     padding: 15px;
     border-radius: 15px;
     text-align: justify;
+    border: 2px solid #4a3432;
 }
 
 button{
@@ -164,6 +169,10 @@ footer{
         font-size: 40px;
     }
 
+    header h1{
+        display: none;
+    }
+
     .skip a{
         background: white;
         left: 0;
@@ -190,6 +199,14 @@ footer{
     header{
         flex-direction: row;
         width: 100%;
+        position: sticky;
+        top: 0px;
+        
+    }
+
+    header h1{
+        display: block;
+        margin: 20px 30px;
     }
 
     nav{
@@ -199,6 +216,8 @@ footer{
     .nav_links{
         display: flex;
         margin-left: auto;
+        align-items: center;
+        margin-right: 30px;
     }
 
     .nav_item{
@@ -210,12 +229,16 @@ footer{
         transition: font-size 0.2s ease-in 0.1s;
     }
 
-    button:hover, button:focus, #current:hover, #current:focus{
+    #current{
+        font-size: 24px;
+    }
+
+    button:hover, button:focus{
         font-size: 115%;
     }
 
-    #current{
-        font-size: 22px;
+    #current:hover, #current:focus{
+        font-size: calc(24px*1.15);
     }
 
     .articlevertpics{
@@ -234,8 +257,8 @@ footer{
         background-size: cover;
         background-repeat: no-repeat;
         margin: auto;
-        border-top: 5px solid #4a3432;
-        border-bottom: 5px solid #4a3432;
+        border-top: 3px solid #4a3432;
+        border-bottom: 3px solid #4a3432;
     }
 
     .aboutme .articlepics{
@@ -258,17 +281,13 @@ footer{
         background-image: url("../images/catsatsink.jpeg");
     }
 
-    .history p{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    .history h2{
-        margin-top: 20px;
-    }
-
-    .history h1{
-        margin-bottom: 20px;
+    main p{
+        width: 450px;
+        font-size: 20px;
+    }    
+    
+    main h1{
+        display: none;
     }
 
     .skip a{
