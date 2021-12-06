@@ -308,7 +308,7 @@ footer{
 
     .articlevertpics p{
         display: block;
-        width: 400px;
+        width: 30%;
     }
 
     main p{
@@ -324,13 +324,13 @@ footer{
 
     .articlepics p{
         display: block;
-        width: 400px;
+        width: 35%;
         height: fit-content;
     }
 
     .philosophy .articlepics img{
         display: block;
-        width: 50%;
+        width: 55%;
     }
 
     .philosophy .articlepics{
