@@ -217,7 +217,7 @@ footer{
         width: 100%;
         position: sticky;
         top: 0px;
-        
+        z-index: 4;
     }
 
     header h1{
@@ -293,10 +293,6 @@ footer{
         background-image: url("../images/CatDaguerreotype.png");
     }
 
-    /* .philosophy .articlepics{
-        background-image: url("../images/catsatsink.jpeg");
-    } */
-
     .articlevertpics{
         margin-top: 30px;
         margin-bottom: 30px;
@@ -342,6 +338,60 @@ footer{
     
     main h1{
         display: none;
+    }
+
+    .container-lg{
+        width: 80%;
+    }
+
+    .carousel-inner img{
+        height: 500px;
+        margin: auto;
+    }
+
+    .carousel-inner{
+        position: static;
+        width: 100%;
+        overflow: hidden;
+        background-color: #e07e3d;
+        border-radius: 50px;
+        border: 3px solid #4a3432;
+    }
+
+    .carousel-inner  {
+        position: relative;
+        /* display: none; */
+        -webkit-transition: 10s ease-in-out left;
+        -moz-transition: 10s ease-in-out left;
+        -o-transition: 10s ease-in-out left;
+        transition: 10s ease-in-out left;
+    }
+
+    .carousel-control-prev-icon{
+        background-image: url("../images/catpawleft.png");
+        padding: 30px;
+    }
+
+    .carousel-control-next-icon{
+        background-image: url("../images/catpawright.png");
+        padding: 30px;
+    }
+
+    .carousel-indicators {
+        background-color: #000000;
+        opacity: 70%;
+        width: 40%;
+        margin: auto;
+        margin-bottom: 20px;
+        border-radius: 50px;
+    }
+    
+    .carousel-control-next-icon p, .carousel-control-prev-icon p{
+        position:relative;
+        margin-top: 35px;
+        right: 17px;
+        color: #000000;
+        text-decoration-color: #000000;
     }
 
     .skip a{
