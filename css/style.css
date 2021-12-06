@@ -4,13 +4,13 @@ header{
     align-items: center;
     width: 100%;
     font-size: 20px;
-    background-color: #e07e3d; /* e7ac62 */
-    border-bottom: 3px solid #000000;
+    background-color: #e07e3d; 
+    border-bottom: 3px solid #4a3432;
 }
 
 body{
-    background-color: #fcfcf0; /* e3c192 */
-    color: #4a3432; /* 5b6470 */
+    background-color: #fcfcf0; 
+    color: #4a3432; 
     font-family: 'Roboto', sans-serif;
 }
 
@@ -35,7 +35,7 @@ body{
 }
 
 .articlevertpics img{
-    margin: 20px 5px;
+    margin: 0px 5px;
     width: 40%;
     height: auto;
     display: block;
@@ -45,13 +45,13 @@ body{
     display: block;
     width: 60%;
     height: auto;
-    margin: 20px auto;
+    margin: 0px auto;
 }
 
 h1{
     font-size: 35px;
     text-align: center;
-    margin-top: 20px;
+    margin: 20px;
     font-weight: 700;
     text-shadow: 2px 2px 4px #8f6c49;
 }
@@ -66,7 +66,7 @@ h2{
 main p{
     display: flex;
     width: 300px;
-    margin: auto;
+    margin: 20px auto;
     background-color: #ebe5d5;
     justify-content: center;
     padding: 15px;
@@ -228,17 +228,47 @@ footer{
     }
 
     .articlepics{
-        background-image: url("../images/chloe.JPG");
         min-height: 500px;
         background-attachment: fixed;
         background-position: center;
-        background-size: 80%;
+        background-size: cover;
         background-repeat: no-repeat;
         margin: auto;
+        border-top: 5px solid #4a3432;
+        border-bottom: 5px solid #4a3432;
     }
 
-    .articlepics p{
-        
+    .aboutme .articlepics{
+        background-image: url("../images/chloe.JPG");
+    }
+
+    .history #ancient{
+        background-image: url("../images/ancientegyptcat.jpg");
+    }
+
+    .history #egyptstatue{
+        background-image: url("../images/egyptcatstatues.jpg");
+    }
+
+    .history #daguerreotype{
+        background-image: url("../images/CatDaguerreotype.png");
+    }
+
+    .philosophy .articlepics{
+        background-image: url("../images/catsatsink.jpeg");
+    }
+
+    .history p{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .history h2{
+        margin-top: 20px;
+    }
+
+    .history h1{
+        margin-bottom: 20px;
     }
 
     .skip a{
