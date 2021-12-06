@@ -132,6 +132,14 @@ footer{
     display: none;
 }
 
+.articlepics p{
+    display: none;
+}
+
+.articlevertpics p{
+    display: none;
+}
+
 @media screen and (min-width: 760px) {
     .gallery{
         grid-template-columns: 1fr 1fr 1fr;
@@ -170,6 +178,14 @@ footer{
     }
 
     header h1{
+        display: none;
+    }
+
+    .articlepics p{
+        display: none;
+    }
+
+    .articlevertpics p{
         display: none;
     }
 
@@ -277,9 +293,9 @@ footer{
         background-image: url("../images/CatDaguerreotype.png");
     }
 
-    .philosophy .articlepics{
+    /* .philosophy .articlepics{
         background-image: url("../images/catsatsink.jpeg");
-    }
+    } */
 
     .articlevertpics{
         margin-top: 30px;
@@ -292,6 +308,7 @@ footer{
 
     .articlevertpics p{
         display: block;
+        width: 400px;
     }
 
     main p{
@@ -302,12 +319,25 @@ footer{
 
     .history p{
         display: block;
-        width: 500px;
+        width: 550px;
     }
 
-    .philosophy #visible{
+    .articlepics p{
         display: block;
-        width: 500px;
+        width: 400px;
+        height: fit-content;
+    }
+
+    .philosophy .articlepics img{
+        display: block;
+        width: 50%;
+    }
+
+    .philosophy .articlepics{
+        border: none;
+        display: flex;
+        min-height: 0px;
+        align-items: center;
     }
     
     main h1{
