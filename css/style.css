@@ -43,6 +43,8 @@ body{
     width: 40%;
     height: auto;
     display: block;
+    border: 3px solid #4a3432;
+    border-radius: 50px;
 }
 
 .articlepics img{
@@ -50,6 +52,8 @@ body{
     width: 60%;
     height: auto;
     margin: 0px auto;
+    border: 3px solid #4a3432;
+    border-radius: 50px;
 }
 
 h1{
@@ -75,13 +79,12 @@ main p{
     justify-content: center;
     padding: 15px;
     border-radius: 15px;
-    text-align: justify;
     border: 2px solid #4a3432;
 }
 
 button{
     display: block;
-    background-color: #4a3432; /* 5c90b5 */
+    background-color: #4a3432; 
     font-size: 25px;
     margin: 5px auto;
     border-radius: 10px;
@@ -113,6 +116,10 @@ footer{
     grid-gap: 4px;
 }
 
+.gallery img{
+    border: 3px solid #4a3432;
+}
+
 .gallery .vertical1{
     grid-column-start: 1;
     grid-column-end: 2;
@@ -128,8 +135,47 @@ footer{
     grid-column-end: 3;
 }
 
+form fieldset{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #ebe5d5;
+    padding: 15px;
+    border-radius: 15px;
+    border: 2px solid #4a3432;
+}
+
+fieldset legend{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+form label{
+    line-height: 30px;
+    font-weight: bold;
+}
+
 .skip a{
-    display: none;
+    background: #FFFFFF;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+    position: absolute;
+    top: -50px;
+    border: 3px solid #000000;
+    border-radius: 10px; 
+    font-weight: bold;
+    color: #0000ff;
+}
+
+.skip a:focus{
+position: absolute;
+top: 0px;
 }
 
 .articlepics p{
@@ -137,6 +183,14 @@ footer{
 }
 
 .articlevertpics p{
+    display: none;
+}
+
+.carousel{
+    display: none;
+}
+
+.flip-card{
     display: none;
 }
 
@@ -189,15 +243,27 @@ footer{
         display: none;
     }
 
+    .carousel{
+        display: none;
+    }
+
+    .flip-card{
+        display: none;
+    }
+
+    form fieldset{
+        width: 60%;
+    }
+
     .skip a{
-        background: white;
+        background: #FFFFFF;
         left: 0;
         padding: 6px;
         -webkit-transition: top 1s ease-out;
         transition: top 1s ease-out;
         z-index: 1;
         position: absolute;
-        top: -40px;
+        top: -50px;
         border: 3px solid #000000;
         border-radius: 10px; 
         font-weight: bold;
@@ -340,6 +406,10 @@ footer{
         display: none;
     }
 
+    .carousel{
+        display: block;
+    }
+
     .container-lg{
         width: 80%;
     }
@@ -360,7 +430,6 @@ footer{
 
     .carousel-inner  {
         position: relative;
-        /* display: none; */
         -webkit-transition: 10s ease-in-out left;
         -moz-transition: 10s ease-in-out left;
         -o-transition: 10s ease-in-out left;
@@ -385,17 +454,128 @@ footer{
         margin-bottom: 20px;
         border-radius: 50px;
     }
-    
-    .carousel-control-next-icon p, .carousel-control-prev-icon p{
-        position:relative;
-        margin-top: 35px;
-        right: 17px;
+
+    .carousel a{
         color: #000000;
-        text-decoration-color: #000000;
+    }
+
+    form fieldset{
+        width: 500px;
+        height: 450px;
+        border-radius: 50px;
+        justify-content: space-around;
+    }
+
+    .gallery{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-auto-flow: column;
+    }
+
+    .gallery .horizontal1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        height: 100%;
+        overflow: hidden;
+    }
+    
+    .gallery .vertical1{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .gallery .horizontal2{
+        grid-column-start: 4;
+        grid-column-end: 6;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .gallery .vertical2{
+        grid-column-start: 6;
+        grid-column-end: 7;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .gallery img{
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+
+    .about-bottom{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .flip-card{
+        display: flex;
+        background-color: transparent;
+        width: 500px;
+        height: 450px; 
+        border: 3px solid #4a3432;
+        perspective: 1000px;
+        border-radius: 50px;
+    }
+
+    .flip-card-inner{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+
+    .flip-card:hover .flip-card-inner, .flip-card:focus .flip-card-inner, .flip-card:focus-within .flip-card-inner{
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 50px;
+    }
+
+    .flip-card-front{
+        background-color: #ebe5d5;
+        color: #000000;
+    }
+
+    .flip-card-front{
+        overflow: hidden;
+    }
+
+    .flip-card-back p{
+        font-size: 25px;
+    }
+
+    .flip-card-back{
+        background-color: #ebe5d5;
+        color: #000000;
+        transform: rotateY(180deg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .flip-card-back h1{
+        display: block;
+    }
+
+    .flip-card-back p{
+        display: block;
+        border: none;
     }
 
     .skip a{
-        background: white;
+        background: #FFFFFF;
         left: 0;
         padding: 6px;
         -webkit-transition: top 1s ease-out;
@@ -412,5 +592,29 @@ footer{
     .skip a:focus{
     position: absolute;
     top: 0px;
+    }
+}
+
+
+@media screen and (prefers-reduced-motion: reduce){
+    .skip a{
+        -webkit-transition: initial;
+        transition: initial;
+    }
+
+    .articlepics{
+        background-attachment: initial;
+    }
+
+    button{
+        transition: initial;
+    }
+
+    .flip-card:hover .flip-card-inner, .flip-card:focus .flip-card-inner, .flip-card:focus-within .flip-card-inner{
+        transform: initial;
+    }
+
+    .flip-card-back{
+        transform: initial;
     }
 }
